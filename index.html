@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Club Enquiry Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="Head.png" alt="Centre of Excellence Logo" class="logo">
+      <div class="header-text">
+        <h1>Centre of Excellence</h1>
+        <p>Innovate, Research, Excel</p>
+      </div>
+    </div>
+  </header>
+
+  <form id="enquiryForm">
+    <div class="form-group">
+      <label>Full Name:</label>
+      <input type="text" id="fullName" required>
+    </div>
+
+    <div class="form-group">
+      <label>Roll Number:</label>
+      <input type="text" id="rollNo" required>
+    </div>
+
+    <div class="form-group">
+      <label>Branch:</label>
+      <select id="branch" required>
+        <option value="">Select Branch</option>
+        <option value="Computer">Computer</option>
+        <option value="IT">IT</option>
+        <option value="ENTC">ENTC</option>
+        <option value="Mechanical">Mechanical</option>
+        <option value="Electrical">Electrical</option>
+        <!-- Add more later -->
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Email:</label>
+      <input type="email" id="email" required>
+    </div>
+
+    <div class="form-group">
+      <label>Phone Number:</label>
+      <input type="tel" id="phone" maxlength="10" required>
+    </div>
+
+    <div class="form-group">
+      <label>Year of Study:</label>
+      <select id="year" required>
+        <option value="FE">FE</option>
+        <option value="SE">SE</option>
+        <option value="TE">TE</option>
+        <option value="BE">BE</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Division:</label>
+      <input type="text" id="division" required>
+    </div>
+
+    <div class="form-group">
+      <label>CGPA:</label>
+      <input type="number" step="0.01" id="cgpa" min="0" max="10" required>
+    </div>
+
+    <div class="form-group">
+      <label>Skillset:</label>
+      <textarea id="skills" rows="3"></textarea>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+  <!-- ✅ Success message (hidden initially) -->
+<div id="successMessage" style="display: none; text-align: center; margin-top: 20px;">
+  <h3>Your response has been recorded ✅</h3>
+  <button id="newResponseBtn">Submit another response</button>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
